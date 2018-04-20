@@ -14,7 +14,7 @@ def cross_validation(bags, labels, model_1, model_2, folds, parameters_1 = {}, p
         Y_train = labels[train_index]
         X_test  = [bags[i] for i in test_index]
         Y_test  = labels[test_index]
-        #sys.stdout.write('Fold# '+str(fold)+'...')
+        
         if len(parameters_1) > 0: 
             model_1.fit(X_train, Y_train, **parameters_1)
         if len(parameters_2) > 0: 

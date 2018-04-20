@@ -47,7 +47,7 @@ class KNN(object):
             relevant_test_labels.sort()
             #print("Sorted labels")
             #print(relevant_test_labels)
-            label_out = relevant_test_labels[math.floor(self._K / 2)]
+            label_out = relevant_test_labels[int(math.floor(self._K / 2))]
             pred_labels = np.append(pred_labels,label_out)
 
 

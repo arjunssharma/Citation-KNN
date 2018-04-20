@@ -81,7 +81,7 @@ class CitationKNN(object):
             
             relevant_test_labels.sort()
 
-            label_out = relevant_test_labels[math.floor( (len(references) + len(citers) - 1) / 2)]
+            label_out = relevant_test_labels[int(math.floor( (len(references) + len(citers) - 1) / 2))]
             pred_labels = np.append(pred_labels,label_out)
 
             self._DM.pop()
