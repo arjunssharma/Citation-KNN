@@ -18,7 +18,7 @@ class KNN(object):
         self._K = kwargs['k']
 
     def predict(self, Testbags):
-
+        print("Starting KNN")
         train_bags = self._bags
         full_bags = self._bags+Testbags
         #print(full_bags)
@@ -49,6 +49,7 @@ class KNN(object):
             #print(relevant_test_labels)
             label_out = relevant_test_labels[int(math.floor(self._K / 2))]
             pred_labels = np.append(pred_labels,label_out)
+        return pred_labels
 
 
     def DistanceMatrix (self,train_bags, test_bags): 

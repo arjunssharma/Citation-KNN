@@ -22,6 +22,7 @@ def cross_validation(bags, labels, model_1, model_2, folds, parameters_1 = {}, p
         else: 
             model_1.fit(bags, labels)
             model_2.fit(bags, labels)
+        print("Starting")
         predictions_1 = model_1.predict(X_test)
         predictions_2 = model_2.predict(X_test)
         #print("End prediction in mil_cross_val. Prediction result from model 1:")

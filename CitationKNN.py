@@ -18,6 +18,7 @@ class CitationKNN(object):
         self._no_of_citers = kwargs['citers']
 
     def predict(self, Testbags):
+        print("Starting C-KNN")
         train_bags = self._bags
         #full_bags = self._bags+Testbags
         #print(full_bags)
